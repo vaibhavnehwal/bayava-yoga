@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AboutMenu from "./AboutMenu";
 import YellowButton from "../Reusables/YellowButton";
-import logo from "/DAYA-logo.svg";
+// import logo from "/DAYA-logo.svg";
+import textLogo from "/DAYA-text-logo.png";
 
 function Navbar() {
 	const [aboutMenu, setAboutMenu] = useState(false);
@@ -20,13 +21,11 @@ function Navbar() {
 	return (
 		<nav className="fixed top-0 left-0 z-50 w-full h-20 flex items-center justify-between px-5 bg-smoke-brown drop-shadow-lg min-[1200px]:px-40">
 			<div className="">
-				<h1 className="min-[920px]:text-4xl text-2xl font-bold">
+				<h1 className="lg:text-6xl md:text-3xl sm:text-2xl text-xl font-bold text-white">
 					<Link className="" to="/">
-						<img
-							src={logo}
-							alt="Logo"
-							className="w-20"
-						/>
+						<div className="font-light leading-9 tracking-widest">
+							DAYA
+						</div>
 					</Link>
 				</h1>
 			</div>
@@ -131,7 +130,10 @@ function Navbar() {
 							</Link>
 						</li>
 						<li>
-							<Link onClick={handleMenu} to="/educational-programs">
+							<Link
+								onClick={handleMenu}
+								to="/educational-programs"
+							>
 								Education Programs
 							</Link>
 						</li>
