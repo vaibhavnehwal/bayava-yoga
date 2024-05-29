@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AboutMenu from "./AboutMenu";
 import YellowButton from "../Reusables/YellowButton";
-// import logo from "/DAYA-logo.svg";
-import textLogo from "/DAYA-text-logo.png";
 
 function Navbar() {
 	const [aboutMenu, setAboutMenu] = useState(false);
